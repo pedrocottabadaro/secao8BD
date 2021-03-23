@@ -23,11 +23,11 @@
         <form class="formulario" method="post" action="../../controller/controller.php">
 
             <div class= "field">
-                <input type="hidden" name="action" value="create">
+                <!-- <input type="hidden" name="action" value="create">
                 <input type="text" id="nome" name="nome" placeholder="Nome completo" required>
                 <input type="text" id="email" name="email" placeholder="E-mail" required>
                 <input type="password" id="senha" name="senha" placeholder="Digite uma senha" required>
-                <input type="password" id="senha2" name="senha2" placeholder="Digite novamente a senha" required>
+                <input type="password" id="senha2" name="senha2" placeholder="Digite novamente a senha" required> -->
             </div>
 
             <input type="submit" name="entrar" value="CADASTRAR" onclick="cadastrar()">

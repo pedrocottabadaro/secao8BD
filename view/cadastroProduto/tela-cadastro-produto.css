@@ -20,6 +20,19 @@ html {
     flex-direction: column;
     width: 90%;
  }
+ .field a{
+    padding-left: 10px;
+    font-size: 1.1em;
+    display: block;
+    width: 100%;
+    color: white;
+    margin: 3px;
+    font-family: Source Code Pro;
+    text-decoration: none;
+ }
+ .field a:hover{
+    color: #F6C154;
+ }
 .containerBotao{
     
     display: flex;
@@ -28,23 +41,66 @@ html {
     justify-content: center;
     max-width: 100%;
 }
-
 #botoes button{
     margin-right: 10px;
     text-align: center;
 }
 
+button{
+    background-color: #3B4157;
+    outline: none;
+    width: 100px;
+    height: 54px;
+    left: 516px;
+    top: 725px;
+    
+    
+    border: none;
+    transition-duration: 0.4s;
+}
 
 .clicked{
     background-color: #F6C154;
 }
 
-#titleInfo{
+
+#titleCadastro{
     color: #F6C154;
     font-size: 80px;
     margin: 0px;
+    text-align: center;
 }
 
+#titleLogin{
+    font-family: Source Code Pro;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 25px;
+
+    color: #FFFFFF;
+
+}
+
+#titleInfo{
+    font-family: Source Code Pro;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    
+    color: #FFFFFF;
+}
+
+h1{
+    font-family: Source Code Pro;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 31px;
+    text-align: center;
+
+    color: #FFFFFF;
+}
 
 
 .imageLogout img{
@@ -60,6 +116,7 @@ html {
     align-self: flex-start;
     justify-content: space-between;
     width: 100%;
+    align-items: center;
 }
 .dropbtn {
     color: white;
@@ -70,7 +127,10 @@ html {
     width: 80px;
     height: 80px;
   }
+.containerCenter{
 
+    margin-top: 200px;
+}
 #myDropdown{
     margin-left: 15px;
 }
@@ -96,11 +156,14 @@ html {
     display: block;
 }
 
+.dropdown a:hover {background-color: #ddd;}
+
 .show {display: block;}
 
 .containerDropDown{
     display: flex;
     align-self: baseline;
+  
 }
 
 .formulario {
@@ -136,19 +199,6 @@ input[type=password]{
 }
 
 input[type=submit]{
-    display: block;
-    background-color: #F6C154;
-    height: 35px;
-    border: none;
-    outline: 0;
-    cursor: pointer;
-    width: 110px;
-    margin: 0 auto;
-    text-align: center;
-    border-radius: 15px;
-}
-
-.alterar {
     display: block;
     background-color: #F6C154;
     height: 35px;

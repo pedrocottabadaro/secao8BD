@@ -2,11 +2,11 @@
 
 // session_start();
 
-// require('../../model/usuario/usuario.php');
+// require('../../model/produto/produto.php');
 // require('../../database/connection.php');
 
-// $usuario = new Usuario;
-// $usuario = $usuario->getUsuario($_SESSION['id']);
+// $produto = new Produto;
+// $produto = $produto->getProduto($_SESSION['id']);
 
 // echo '<pre>';
 // print_r($usuario);
@@ -20,7 +20,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Suas informações</title>
-    <link rel="stylesheet" href="tela-info-user.css">
+    <link rel="stylesheet" href="tela-info-produto.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
    
 </head>
@@ -34,18 +34,21 @@
                 <div id="mySidenav" class="sidenav">
                     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                     <a href="../produto/tela-produto.php">Menu</a>
+                    <a href="../info/tela-info-user.php">Alterar informações</a>
                     <a href="../infoProduto/tela-info-produto.php">Alterar Produto</a>
                     <a href="../cadastroProduto/tela-cadastro-produto.php">Cadastrar Produto</a>
 
                 </div>
             </div> 
-            <h1 id="titleInfo">Alterar informações</h1>
+
+            <h1 id="titleInfo">Alterar Produto</h1>
+
             <div class="imageLogout">
                 <img src="../../extra/logout-button.png" onclick="sair()" alt="logout">
             </div>         
         </div>
 
-       
+     
 
         <form class="formulario" method="post" action="../../controller/controller.php">
 
@@ -68,6 +71,6 @@
 </body>
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
-<script src="tela-info-user.js"></script>
+<script src="tela-info-produto.js"></script>
 
 </html>
