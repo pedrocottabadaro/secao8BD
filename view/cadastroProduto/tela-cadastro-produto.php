@@ -1,4 +1,25 @@
+<?php
 
+require_once '../../database/connection.php';
+require_once '../../model/produto/produto.php';
+
+$submit = "Cadastrar";
+
+if (!empty($_GET)) {
+
+    $produto = new Produto;
+    $produto = $produto->getProduto(intval($_GET['id']));
+    $submit = "Alterar";
+
+}
+
+$nome = (!empty($produto)) ? $produto['NOME'] : "";
+$unidade = (!empty($produto)) ? $produto['UNIDADE'] : "";
+$peso = (!empty($produto)) ? $produto['PESO'] : "";
+$qtd = (!empty($produto)) ? $produto['QTD_ESTOQUE'] : "";
+$preco = (!empty($produto)) ? $produto['PRECO'] : "";
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,17 +58,19 @@
 
         <div class="containerCenter">
             <h1>Inserir informações do produto</h1>
-                <form class="formulario" method="post" action="../../controller/controller.php">
+                <form class="formulario" method="post" action="../../controller/controller_produto.php">
 
                     <div class= "field">
-                        <input type="hidden" name="action" value="create">
-                        <input type="text" id="nome" name="nome" placeholder="Nome completo" required>
-                        <input type="text" id="email" name="email" placeholder="E-mail" required>
-                        <input type="password" id="senha" name="senha" placeholder="Digite uma senha" required>
-                        <input type="password" id="senha2" name="senha2" placeholder="Digite novamente a senha" required>
+                        <input type="hidden" name="action" value="update">
+                        <input type="hidden" name="id" value="<?= $_GET['id']?>">
+                        <input type="text" name="nome" placeholder="Nome" value="<?=$nome?>" required>
+                        <input type="text" name="unidade" placeholder="Unidade" value="<?=$unidade?>" required>
+                        <input type="text" name="peso" placeholder="Peso" value="<?=$peso?>" required>
+                        <input type="text" name="qtd_estoque" placeholder="Quantidade em estoque" value="<?=$qtd?>" required>
+                        <input type="text" name="preco" placeholder="Preço 0.00" value="<?=$preco?>" required>
                     </div>
 
-                    <input type="submit" name="entrar" value="CADASTRAR" onclick="cadastrar()">
+                    <button class="btn btn-primary" type="submit"><?=$submit?></button>
                 
 
                 </form>

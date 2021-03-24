@@ -1,20 +1,20 @@
 
 <?php
 
+require_once '../../database/connection.php';
+require_once '../../model/produto/produto.php';
+
+$produto = new Produto;
+$produto = $produto->getProdutoAll();
+
+// echo '<pre>';
+// print_r($produto);
+// echo '</pre>';
 
 ?>
 
-
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -33,14 +33,6 @@
 
     <div id="containerDropdown">
             <div class="dropdownSideBar">
-                    <img src="../../extra/menu.png" class="dropbtn" onclick="openNav()" alt="logout">
-                    <div id="mySidenav" class="sidenav">
-                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                        <a href="../infoProduto/tela-info-produto.php">Alterar Produtos</a>
-                        <a href="../info/tela-info-user.php">Alterar Informações</a>
-                        <a href="../cadastroProduto/tela-cadastro-produto.php">Cadastrar Produto</a>
-
-                    </div>
                     
                     
             </div> 
@@ -55,56 +47,42 @@
     </div>
     
     <div class="tablecontainer">
-    <table id="example" class="table table-striped" style="width:100%">
-        <thead>
-            <tr>
-                <th>Nome</th>
-                <th>Unidade</th>
-                <th>Peso</th>
-                <th>Quantidade</th>
-                <th>Preço</th>
-                <th>Editar</th>
-                <th>Excluir</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Tiger Nixon</td>
-                <td>System Architect</td>
-                <td>Edinburgh</td>
-                <td>61</td>
-                <td>2011/04/25</td>
-                <td><img src="../../extra/edit.png" onclick="edit()" alt="editar" id="editbutton"></td>
-                <td><img src="../../extra/remove.png" onclick="remove()" alt="remover" id="removebutton"></td>
-            </tr>
-            <tr>
-                <td>Garrett Winters</td>
-                <td>Accountant</td>
-                <td>Tokyo</td>
-                <td>63</td>
-                <td>2011/07/25</td>
-                <td><img src="../../extra/edit.png" onclick="edit()" alt="editar" id="editbutton"></td>
-                <td><img src="../../extra/remove.png" onclick="remove()" alt="remover" id="removebutton"></td>
-            </tr>
-        
-        </tbody>
-        <tfoot>
-            <tr>
-            <th>Nome</th>
-            <th>Unidade</th>
-            <th>Peso</th>
-            <th>Quantidade</th>
-            <th>Preço</th>
-                
-            </tr>
-        </tfoot>
-    </table>
+        <table id="example" class="table table-striped" style="width:100%">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nome</th>
+                    <th>Unidade</th>
+                    <th>Peso</th>
+                    <th>Quantidade</th>
+                    <th>Preço</th>
+                    <th><a href="../cadastroProduto/tela-cadastro-produto.php"><button class="btn btn-success">Adicionar</button></a></th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach($produto as $key => $value) {?>
+                    <tr>
+                        <td><?=$value['CD_PRODUTO']?></td>
+                        <td><?= $value['NOME']?></td>
+                        <td><?= $value['UNIDADE']?></td>
+                        <td><?= $value['PESO']?></td>
+                        <td><?= $value['QTD_ESTOQUE']?></td>
+                        <td><?= $value['PRECO']?></td>
+                        <td>
+                            <a href="../cadastroProduto/tela-cadastro-produto.php?id=<?=$value['CD_PRODUTO']?>"><img src="../../extra/edit.png" onclick="edit()" alt="editar" id="editbutton"></a> 
+                            <form action="../../controller/controller_produto.php" method="post">
+                                <input type="hidden" name="action" value="delete">
+                                <input type="hidden" name="id" value="<?=$value['CD_PRODUTO']?>">
+                                <button type="submit" class="btn btn-danger"><b>X</b></button>
+                            </form>
+                        </td>
+                    </tr>
+                <?php }?>
+            </tbody>
+        </table>
 
     </div>
    
-    
-
-                                                                                                                           
 
 </div>
 

@@ -17,13 +17,7 @@ class Produto{
             $stmt=$conn->prepare($sql);
             $stmt->execute();
 
-            while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-
-                $dados[] = $row[''];
-
-            }
-            
-            return $dados;
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 
         } 
@@ -33,13 +27,13 @@ class Produto{
 
     }
 
-    public function getProduto($data){
+    public function getProduto($id){
 
         global $conn;
 
        
 
-        $sql = "SELECT * FROM produto WHERE CD_PRODUTO = {$data['id']}";
+        $sql = "SELECT * FROM produto WHERE CD_PRODUTO = {$id}";
 
         try{
 
@@ -60,10 +54,6 @@ class Produto{
 
     }
 
-   
-
-
-
     public function insertProduto($data) {
         global $conn;
 
@@ -83,9 +73,8 @@ class Produto{
     }
 
     public function updateProduto($data) {
+        
         global $conn;
-
-       
 
         $sql = "UPDATE produto SET NOME = '{$data['nome']}', UNIDADE = '{$data['unidade']}', PESO = {$data['id']}, QTD_ESTOQUE = {$data['qtd_estoque']}, PRECO = {$data['preco']} WHERE CD_PRODUTO = {$data['id']}";
 
@@ -100,12 +89,11 @@ class Produto{
         }
     }
 
-    public function deleteProduto($data) {
+    public function deleteProduto($id) {
+        
         global $conn;
 
-       
-
-        $sql = "DELETE FROM produto WHERE CD_PRODUTO = {$data['id']}";
+        $sql = "DELETE FROM produto WHERE CD_PRODUTO = {$id}";
 
         try{
 
@@ -118,6 +106,5 @@ class Produto{
         }
     }
 
- 
 
 }
