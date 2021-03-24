@@ -5,7 +5,6 @@ require('../model/usuario/usuario.php');
 
 $usuario = new Usuario();
 
-
 if($_POST['action'] == 'create'){
 
     $usuario->createUsuario($_POST);
@@ -13,10 +12,9 @@ if($_POST['action'] == 'create'){
 
 } else if($_POST['action'] == 'update'){
     
-    
     $usuario->updateUsuario($_POST);
 
-    header('Location:../view/info/tela-info-user.php');
+    header('Location:../view/produto/tela-produto.php');
     
 } else if($_POST['action'] == 'login'){
     

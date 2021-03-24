@@ -7,10 +7,6 @@ require_once '../../model/produto/produto.php';
 $produto = new Produto;
 $produto = $produto->getProdutoAll();
 
-// echo '<pre>';
-// print_r($produto);
-// echo '</pre>';
-
 ?>
 
 <!DOCTYPE html>
@@ -35,7 +31,7 @@ $produto = $produto->getProdutoAll();
             <div class="dropdownSideBar">
 
             <div class="imageLogout">
-                <img src="../../extra/user.png" onclick="sair()" alt="logout">
+                <a href="../cadastro/tela-cadastro.php?id=<?=$_SESSION['id']?>"><img class="img-icon" src="../../extra/user.png"></a>
             </div>
 
 
@@ -47,7 +43,7 @@ $produto = $produto->getProdutoAll();
                 
         
                 <div class="imageLogout">
-                    <img src="../../extra/logout-button.png" onclick="sair()" alt="logout">
+                    <img src="../../extra/logout-button.png" class="img-icon" onclick="sair()" alt="logout">
                 </div>             
     </div>
     

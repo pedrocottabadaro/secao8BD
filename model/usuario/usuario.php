@@ -47,7 +47,7 @@ class Usuario{
     {
         global $conn;
 
-        $sql = "UPDATE usuario  SET NOME = '{$data['nome']}', TELEFONE = '{$data['telefone']}', EMAIL = '{$data['email']}', LOGIN = '{$data['login']}', SENHA = '{$data['senha']}', CPF = '{$data['cpf']}', WHERE CD_USUARIO = {$data['id']}";
+        $sql = "UPDATE usuario  SET NOME = '{$data['nome']}', TELEFONE = '{$data['telefone']}', EMAIL = '{$data['email']}', LOGIN = '{$data['login']}', SENHA = '{$data['senha']}', CPF = '{$data['cpf']}' WHERE CD_USUARIO = {$data['id']}";
 
         try {
 

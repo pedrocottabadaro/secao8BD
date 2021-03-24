@@ -4,9 +4,11 @@ require_once '../../database/connection.php';
 require_once '../../model/produto/produto.php';
 
 $submit = "Cadastrar";
+$action = "create";
 
 if (!empty($_GET)) {
-
+    
+    $action = "update";
     $produto = new Produto;
     $produto = $produto->getProduto(intval($_GET['id']));
     $submit = "Alterar";
@@ -52,7 +54,7 @@ $preco = (!empty($produto)) ? $produto['PRECO'] : "";
                 <form class="formulario" method="post" action="../../controller/controller_produto.php">
 
                     <div class= "field">
-                        <input type="hidden" name="action" value="update">
+                        <input type="hidden" name="action" value="<?=$action?>">
                         <input type="hidden" name="id" value="<?= $id?>">
                         <input type="text" name="nome" placeholder="Nome" value="<?=$nome?>" required>
                         <input type="text" name="unidade" placeholder="Unidade" value="<?=$unidade?>" required>
