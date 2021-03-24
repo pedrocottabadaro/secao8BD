@@ -21,7 +21,7 @@ html {
     min-height: 100%;
     width: 100%;
     display: flex;
-    background-color: #006100;
+    background-color: #D3D3D3;
     justify-content: center
  }
  .container {
@@ -67,7 +67,7 @@ button{
 
 
 #titleLogin{
-    color: #D3D3D3;
+    color: #006100;
     font-size: 80px;
     margin: 0px;
 }
@@ -172,7 +172,7 @@ h1{
     font-size: 1.1em;
     display: block;
     width: 100%;
-    color: white;
+    color: #006100;
     margin: 3px;
     font-family: Source Code Pro;
 }

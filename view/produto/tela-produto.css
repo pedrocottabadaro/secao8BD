@@ -10,7 +10,7 @@ body{
   width: 100%;
   display: flex;
   justify-content: center;
-  background-color: #006100  !important;
+  background-color: #D3D3D3  !important;
 }
 
 .containerPage {
@@ -44,7 +44,7 @@ img:hover {
   cursor: pointer;
 }
 #titleProdutos{
-    color: #D3D3D3;
+    color: #006100;
     font-size: 80px;
 }
 
@@ -108,7 +108,7 @@ img:hover {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #D3D3D3;
+  background-color: #006100;
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;

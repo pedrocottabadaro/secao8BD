@@ -32,7 +32,15 @@ $produto = $produto->getProdutoAll();
 <div class="containerPage">
 
     <div id="containerDropdown">
-            <div class="dropdownSideBar"></div> 
+            <div class="dropdownSideBar">
+
+            <div class="imageLogout">
+                <img src="../../extra/user.png" onclick="sair()" alt="logout">
+            </div>
+
+
+
+            </div> 
 
                 <h1 id="titleProdutos">Consulta</h1>
         
@@ -53,7 +61,10 @@ $produto = $produto->getProdutoAll();
                     <th>Peso</th>
                     <th>Quantidade</th>
                     <th>Preço</th>
-                    <th><a href="../cadastroProduto/tela-cadastro-produto.php"><button class="btn btn-success">Adicionar</button></a></th>
+                    <th>Remover</th>
+                    <th>Editar</th>
+                    <th>Adicionar</th>
+                   
                 </tr>
             </thead>
             <tbody>
@@ -66,13 +77,14 @@ $produto = $produto->getProdutoAll();
                         <td><?= $value['QTD_ESTOQUE']?></td>
                         <td><?= $value['PRECO']?></td>
                         <td>
-                            <a href="../cadastroProduto/tela-cadastro-produto.php?id=<?=$value['CD_PRODUTO']?>"><img src="../../extra/edit.png" onclick="edit()" alt="editar" id="editbutton"></a> 
                             <form action="../../controller/controller_produto.php" method="post">
                                 <input type="hidden" name="action" value="delete">
                                 <input type="hidden" name="id" value="<?=$value['CD_PRODUTO']?>">
                                 <button type="submit" class="btn btn-danger"><b>X</b></button>
                             </form>
                         </td>
+                        <td><a href="../cadastroProduto/tela-cadastro-produto.php?id=<?=$value['CD_PRODUTO']?>"><img src="../../extra/edit.png" onclick="edit()" alt="editar" id="editbutton"></a>   </td>
+                        <td> <a href="../cadastroProduto/tela-cadastro-produto.php"><button class="btn btn-success">Adicionar</button></a></td>
                     </tr>
                 <?php }?>
             </tbody>

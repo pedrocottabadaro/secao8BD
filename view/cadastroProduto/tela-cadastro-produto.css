@@ -8,7 +8,7 @@ html {
     min-height: 100%;
     width: 100%;
     display: flex;
-    background-color: #006100;
+    background-color: #D3D3D3;
     justify-content: center;
     text-align: center;
  }
@@ -65,7 +65,7 @@ button{
 
 
 #titleCadastro{
-    color: #D3D3D3;
+    color: #006100;
     font-size: 80px;
     margin: 0px;
     text-align: center;
@@ -99,7 +99,7 @@ h1{
     line-height: 31px;
     text-align: center;
 
-    color: #FFFFFF;
+    color: #006100;
 }
 
 
