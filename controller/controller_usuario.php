@@ -1,29 +1,26 @@
 <?php
+
 require('../database/connection.php');
 require('../model/usuario/usuario.php');
-require('../model/exercicio/exercicio.php');
 
 $usuario = new Usuario();
-$produto = new Produto();
 
 
 if($_POST['action'] == 'create'){
 
-    $usuario->createUsuario($_POST['nome'], $_POST['senha'], $_POST['email']);
+    $usuario->createUsuario($_POST);
     header('Location:../view/login/tela-login.php');
 
-}
-
-else if($_POST['action'] == 'update'){
+} else if($_POST['action'] == 'update'){
     
     
-    $usuario->updateUsuario($_POST['id'], $_POST['nome'], $_POST['senha'], $_POST['email']);
+    $usuario->updateUsuario($_POST);
 
     header('Location:../view/info/tela-info-user.php');
     
 } else if($_POST['action'] == 'login'){
     
-    $valida = $usuario->validaLogin($_POST['email'], $_POST['senha']);
+    $valida = $usuario->validaLogin($_POST);
    
   
     if ($valida) {
@@ -38,8 +35,4 @@ else if($_POST['action'] == 'update'){
         
     }
     
-} else if ($_POST['action'] == 'produto') {
-
-    
-
-} 
+}

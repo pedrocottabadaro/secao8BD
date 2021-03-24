@@ -33,13 +33,13 @@ class Produto{
 
     }
 
-    public function getProduto($id){
+    public function getProduto($data){
 
         global $conn;
 
        
 
-        $sql = "SELECT * FROM produto WHERE CD_PRODUTO = $id";
+        $sql = "SELECT * FROM produto WHERE CD_PRODUTO = {$data['id']}";
 
         try{
 
@@ -100,12 +100,12 @@ class Produto{
         }
     }
 
-    public function deleteProduto($id) {
+    public function deleteProduto($data) {
         global $conn;
 
        
 
-        $sql = "DELETE FROM produto WHERE CD_PRODUTO = $id";
+        $sql = "DELETE FROM produto WHERE CD_PRODUTO = {$data['id']}";
 
         try{
 
