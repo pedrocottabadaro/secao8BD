@@ -21,3 +21,7 @@ function cadastrar(){
     }
 
 }
+
+function sair(){
+  window.location.href='../login/tela-login.php'
+}
