@@ -58,12 +58,13 @@
     <table id="example" class="table table-striped" style="width:100%">
         <thead>
             <tr>
-                <th>Name</th>
-                <th>Position</th>
-                <th>Office</th>
-                <th>Age</th>
-                <th>Start date</th>
-                <th>Salary</th>
+                <th>Nome</th>
+                <th>Unidade</th>
+                <th>Peso</th>
+                <th>Quantidade</th>
+                <th>Preço</th>
+                <th>Editar</th>
+                <th>Excluir</th>
             </tr>
         </thead>
         <tbody>
@@ -73,7 +74,8 @@
                 <td>Edinburgh</td>
                 <td>61</td>
                 <td>2011/04/25</td>
-                <td>$320,800</td>
+                <td><img src="../../extra/edit.png" onclick="edit()" alt="editar" id="editbutton"></td>
+                <td><img src="../../extra/remove.png" onclick="remove()" alt="remover" id="removebutton"></td>
             </tr>
             <tr>
                 <td>Garrett Winters</td>
@@ -81,18 +83,19 @@
                 <td>Tokyo</td>
                 <td>63</td>
                 <td>2011/07/25</td>
-                <td>$170,750</td>
+                <td><img src="../../extra/edit.png" onclick="edit()" alt="editar" id="editbutton"></td>
+                <td><img src="../../extra/remove.png" onclick="remove()" alt="remover" id="removebutton"></td>
             </tr>
         
         </tbody>
         <tfoot>
             <tr>
-                <th>Name</th>
-                <th>Position</th>
-                <th>Office</th>
-                <th>Age</th>
-                <th>Start date</th>
-                <th>Salary</th>
+            <th>Nome</th>
+            <th>Unidade</th>
+            <th>Peso</th>
+            <th>Quantidade</th>
+            <th>Preço</th>
+                
             </tr>
         </tfoot>
     </table>

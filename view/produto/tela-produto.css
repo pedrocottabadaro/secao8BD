@@ -1,31 +1,50 @@
 
 html {
-    margin: 0px;
-    height: 100%;
-    width: 100%;
+  margin: 0px;
+  height: 100%;
+  width: 100%;
+}
+body{
+  margin: 0px;
+  min-height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #006100  !important;
+}
+
+.containerPage {
+  margin: 0px;
+  display: flex;
+
+  align-items: center;
+  flex-direction: column;
+  width: 90%;
+}
+
+
+ #editbutton{
+   width: 30px;
+   height: 30px;
  }
- body{
-    margin: 0px;
-    min-height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    background-color: #8AB74B  !important;
- }
 
- .containerPage {
-    margin: 0px;
-    display: flex;
+#editbutton img :hover{
+  cursor: pointer;
+}
+#removebutton{
+  width: 30px;
+  height: 30px;
+}
 
-    align-items: center;
-    flex-direction: column;
-    width: 90%;
- }
+#removebutton img :hover{
+  cursor: pointer;
+}
 
-
-
+img:hover {
+  cursor: pointer;
+}
 #titleProdutos{
-    color: #F6C154;
+    color: #D3D3D3;
     font-size: 80px;
 }
 
@@ -83,23 +102,23 @@ html {
 }
 
 .sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #3B4157;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-  }
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #D3D3D3;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
   
   .sidenav a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
-    color: #F6C154;
+    color: #006100;
     display: block;
     transition: 0.3s;
   }

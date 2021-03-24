@@ -8,7 +8,7 @@ html {
     min-height: 100%;
     width: 100%;
     display: flex;
-    background-color: #8AB74B;
+    background-color: #006100;
     justify-content: center;
     text-align: center;
  }
@@ -40,7 +40,7 @@ html {
 }
 
 #titleInfo{
-    color: #F6C154;
+    color: #D3D3D3;
     font-size: 80px;
     margin: 0px;
 }
@@ -168,7 +168,7 @@ input[type=submit]{
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #3B4157;
+    background-color: #D3D3D3;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -178,7 +178,7 @@ input[type=submit]{
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
-    color: #F6C154;
+    color: #006100;
     display: block;
     transition: 0.3s;
   }
