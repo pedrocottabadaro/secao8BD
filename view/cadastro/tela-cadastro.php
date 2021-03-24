@@ -20,17 +20,20 @@
 
         <h1>Precisamos de algumas informações suas</h1>
          
-        <form class="formulario" method="post" action="../../controller/controller.php">
+        <form class="formulario" method="post" action="../../controller/controller_usuario.php">
 
             <div class= "field">
-                <!-- <input type="hidden" name="action" value="create">
-                <input type="text" id="nome" name="nome" placeholder="Nome completo" required>
-                <input type="text" id="email" name="email" placeholder="E-mail" required>
+                <input type="hidden" name="action" value="create">
+                <input type="text"  name="nome" placeholder="Nome completo" required>
+                <input type="text"  name="email" placeholder="E-mail" required>
+                <input type="text"  name="telefone" placeholder="Telefone" required>
+                <input type="text"  name="cpf" placeholder="CPF" required>
+                <input type="text"  name="login" placeholder="Login" required>
                 <input type="password" id="senha" name="senha" placeholder="Digite uma senha" required>
-                <input type="password" id="senha2" name="senha2" placeholder="Digite novamente a senha" required> -->
+                <input type="password" id="senha2" name="senha2" placeholder="Digite novamente a senha" required>
             </div>
 
-            <input type="submit" name="entrar" value="CADASTRAR" onclick="cadastrar()">
+            <input type="submit" value="CADASTRAR" onclick="cadastrar()">
             <div class="field">
                 <a href="../login/tela-login.php">Já tenho uma conta</label>
             </div>

@@ -5,7 +5,7 @@ class Usuario{
     public function createUsuario($data){
         global $conn;
 
-        $sql="INSERT INTO usuario (NOME, TELEFONE, EMAIL, LOGIN, SENHA, CPF) VALUES ('{$data['nome']}','{$data['telefone']}','{$data['email']}','{$data['login']}', '{$data['senha']}', '{$data['CPF']}')";
+        $sql="INSERT INTO usuario (NOME, TELEFONE, EMAIL, LOGIN, SENHA, CPF) VALUES ('{$data['nome']}','{$data['telefone']}','{$data['email']}','{$data['login']}', '{$data['senha']}', '{$data['cpf']}')";
 
         try{
 
@@ -65,11 +65,7 @@ class Usuario{
     {
         global $conn;
 
-       
-
         $sql = "SELECT * FROM usuario WHERE LOGIN = '{$data['login']}' and SENHA = '{$data['senha']}'";
-
-       
 
         try{
 
@@ -87,7 +83,6 @@ class Usuario{
                 return false;
 
             }
-
 
         } 
         catch(PDOException $e){

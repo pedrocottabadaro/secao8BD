@@ -24,6 +24,6 @@ if($_POST['action'] == 'create'){
     
     $produto->deleteProduto($_POST['id']);
 
-    // header('Location:../view/produto/tela-produto.php');
+    header('Location:../view/produto/tela-produto.php');
     
 } 

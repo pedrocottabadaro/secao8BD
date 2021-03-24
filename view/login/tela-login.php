@@ -19,11 +19,11 @@
 
         <h1>Seja bem-vindo</h1>
          
-        <form class="formulario" method="post" action="../../controller/controller.php">
+        <form class="formulario" method="post" action="../../controller/controller_usuario.php">
             <input type="hidden" name="action" value="login" required>
             <div class= "field">
-                <label for="email">E-mail:</label>
-                <input type="text" id="email" name="email" required>
+                <label for="email">Login:</label>
+                <input type="text" name="login" required>
             </div>
 
             <div class="field">

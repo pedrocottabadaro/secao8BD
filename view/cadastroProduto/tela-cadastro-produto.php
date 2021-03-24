@@ -13,6 +13,8 @@ if (!empty($_GET)) {
 
 }
 
+
+$id = (!empty($produto)) ? $_GET['id'] : "";
 $nome = (!empty($produto)) ? $produto['NOME'] : "";
 $unidade = (!empty($produto)) ? $produto['UNIDADE'] : "";
 $peso = (!empty($produto)) ? $produto['PESO'] : "";
@@ -35,18 +37,7 @@ $preco = (!empty($produto)) ? $produto['PRECO'] : "";
 
     <div class="container" >
         <div id="containerDropdown">
-            <div class="dropdown">
-                <img src="../../extra/menu.png" class="dropbtn" onclick="openNav()" alt="logout">
-
-                <div id="mySidenav" class="sidenav">
-                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                    <a href="../produto/tela-produto.php">Menu</a>
-                    <a href="../info/tela-info-user.php">Alterar informações</a>
-                    <a href="../infoProduto/tela-info-produto.php">Alterar Produto</a>
-
-
-                </div>
-            </div> 
+            <div class="dropdown"></div> 
 
             <h1 id="titleCadastro">Cadastro de Produto</h1>
          
@@ -62,7 +53,7 @@ $preco = (!empty($produto)) ? $produto['PRECO'] : "";
 
                     <div class= "field">
                         <input type="hidden" name="action" value="update">
-                        <input type="hidden" name="id" value="<?= $_GET['id']?>">
+                        <input type="hidden" name="id" value="<?= $id?>">
                         <input type="text" name="nome" placeholder="Nome" value="<?=$nome?>" required>
                         <input type="text" name="unidade" placeholder="Unidade" value="<?=$unidade?>" required>
                         <input type="text" name="peso" placeholder="Peso" value="<?=$peso?>" required>
@@ -70,7 +61,7 @@ $preco = (!empty($produto)) ? $produto['PRECO'] : "";
                         <input type="text" name="preco" placeholder="Preço 0.00" value="<?=$preco?>" required>
                     </div>
 
-                    <button class="btn btn-primary" type="submit"><?=$submit?></button>
+                    <input type="submit" value="<?=$submit?>">
                 
 
                 </form>

@@ -32,10 +32,7 @@ $produto = $produto->getProdutoAll();
 <div class="containerPage">
 
     <div id="containerDropdown">
-            <div class="dropdownSideBar">
-                    
-                    
-            </div> 
+            <div class="dropdownSideBar"></div> 
 
                 <h1 id="titleProdutos">Consulta</h1>
         

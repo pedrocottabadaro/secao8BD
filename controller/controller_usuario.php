@@ -27,7 +27,7 @@ if($_POST['action'] == 'create'){
  
         session_start();
         $_SESSION['id'] = $valida;
-        header('Location:../view/modulo/modulo.php');
+        header('Location:../view/produto/tela-produto.php');
 
     } else {
 
